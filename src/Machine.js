@@ -69,4 +69,22 @@ module.exports = class Machine {
        return {change: this.amountDeposit} 
     }
 
+    newSelectItem(code, depositedAmount){
+        const change =[]
+    const remain = depositedAmount - this.items[2].itemPrice 
+    console.log(remain)
+    let amountReturn = [20, 10]
+    for (let i =0; i < this.validAmount.length; i++){
+        const bill = this.validAmount[i];
+        if (bill <= remain){
+            change.push(bill)
+        }
+        // return change
+    }
+    // console.log(this.items[code])
+    if(change.length !== amountReturn.length || !change.every((val, i) => val === amountReturn[i])){
+        return 'Cannot return proper change.  Please choose another item or cancel the transaction'
+
 } 
+}
+}
