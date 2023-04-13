@@ -42,5 +42,21 @@ module.exports = class Machine {
         }
        }
        
+
+    const change =[]
+    const remain = 30
+    for (let i =0; i < this.validAmount.length; i++){
+        const bill = this.validAmount[i];
+        if (bill <= remain){
+            change.push(bill)
+        }
+        // return change
+    }
+    console.log(this.items[code])
+    for (let item of this.items){
+        if(item.code == code){
+            return { item : item.itemName, change : change}
+        }
+    }
     }
 }

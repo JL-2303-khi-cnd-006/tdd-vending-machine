@@ -69,6 +69,6 @@ it('Receiving Change', () =>
 const machine = new Machine();
 const expected = {item: 'mints', change: [20, 10]};
 const result = machine.selectItem('Vend6', 100);
-expect(result).toEqual(expected) ;
+expect(result).toEqual(expected);
 
 })
