@@ -8,6 +8,6 @@ describe('the vending machine', () => {
         // exercise
         const actual = machine.seeSelections();
         // assert
-        expect(actual).toEqual(expected);
+        expect(actual).toEqual(expected); 
     });
 });
