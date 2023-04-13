@@ -22,7 +22,7 @@ module.exports = class Machine {
             return res;      
         }
         else {
-            return "Invalid amount entered";
+            return "Invalid amount entered" ;
         }
     }
 }

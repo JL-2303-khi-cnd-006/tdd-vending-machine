@@ -31,7 +31,7 @@ it( 'Amount check' ,() => {
 it('Adding more amount', () => {
     //setup
     const machine = new Machine();
-    machine.deposit(10);
+    machine.deposit(100);
     const expected = "you have deposited Rs 150";
     //exercise
     const result = machine.deposit(50);
