@@ -13,3 +13,17 @@ describe('the vending machine', () => {
         expect(actual).toEqual(expected) ; 
     });
 });
+
+it( 'Amount check' ,() => {
+    //setup
+    const machine = new Machine();
+    const depAmount = 100;
+    const expected = "you have deposited Rs 100";
+
+    //exercise
+    const actual = machine.deposit(depAmount);
+
+    //assert
+    expect(actual).toBe(expected);
+
+});
