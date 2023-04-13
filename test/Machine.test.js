@@ -21,7 +21,7 @@ it( 'Amount check' ,() => {
     const expected = "you have deposited Rs 100";
 
     //exercise
-    const actual = machine.deposit(depAmount);
+    const actual = machine.deposit(depAmount) ;
 
     //assert
     expect(actual).toBe(expected);
