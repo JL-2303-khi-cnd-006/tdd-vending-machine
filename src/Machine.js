@@ -31,7 +31,15 @@ module.exports = class Machine {
        let invalidCode = 'Vend56';
        if(code == invalidCode){
         return `your item with ${code} not found`;
+       }
+       else {
+        let price = 70
         
+        if (depositedAmount < price){
+            let remain = price - depositedAmount;
+            let res = `Your deposit is insufficient.  Please add Rs ${remain} for this item`;
+            return res;
+        }
        }
     }
 }
