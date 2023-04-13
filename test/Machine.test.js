@@ -4,7 +4,11 @@ describe('the vending machine', () => {
     it('should have items to purchase', () => {
         // setup
         const machine = new Machine();
-        const expected = [{itemName: 'crisps', itemPrice: 100}, {itemName: 'chocolate',itemPrice: 100}, {itemName:'mint', itemPrice: 70}];
+        const expected = [
+            { code:'Vend4', itemName:'crisps', itemPrice: 100},
+            { code:'Vend5', itemName:'chocolate', itemPrice: 100 },
+            { code:'Vend6', itemName:'mints', itemPrice: 70 }
+         ];
         
         // exercise
         const actual = machine.seeSelections() ;
@@ -60,3 +64,11 @@ expect(result).toBe(expected);
 
 })
 
+it('Receiving Change', () =>
+{
+const machine = new Machine();
+const expected = {item: 'mints', change: [20, 10]};
+const result = machine.selectItem('Vend6', 100);
+expect(result).toEqual(expected);
+
+})
