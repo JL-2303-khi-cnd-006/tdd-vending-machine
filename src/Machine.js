@@ -1,13 +1,13 @@
 module.exports = class Machine {
     constructor() {
     this.items = [
-    { itemName:'crisps', itemPrice: 100},
-    { itemName:'chocolate', itemPrice: 100 },
-    { itemName:'mint', itemPrice: 70 }
+    { code:'Vend4', itemName:'crisps', itemPrice: 100},
+    { code:'Vend5', itemName:'chocolate', itemPrice: 100 },
+    { code:'Vend6', itemName:'mints', itemPrice: 70 }
  ];
 
     this.amountDeposit = 0;
-    this.validAmount = [10,20,50,100,500,1000,5000];
+    this.validAmount = [500,100,50,20,10];
 }
     seeSelections() {
         return this.items;
@@ -41,5 +41,22 @@ module.exports = class Machine {
             return res;
         }
        }
-    }
+       
+
+    // const change =[]
+    // const remain = 30
+    // for (let i =0; i < this.validAmount.length; i++){
+    //     const bill = this.validAmount[i];
+    //     if (bill <= remain){
+    //         change.push(bill)
+    //     }
+    //     // return change
+    // }
+    // console.log(this.items[code])
+    // for (let item of this.items){
+    //     if(item.code == code){
+    //         return { item : item.itemName, change : change}
+    //     }
+    // }
+    // }
 }
