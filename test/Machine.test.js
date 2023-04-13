@@ -39,7 +39,7 @@ it('Adding more amount', () => {
     expect(result).toBe(expected);
     
    });
-   
+
 
 it('Unavailability of an item', () =>
 {
@@ -49,3 +49,4 @@ const result = machine.selectItem('Vend56');
 expect(result).toBe(expected);
 
 })
+

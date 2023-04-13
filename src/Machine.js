@@ -25,4 +25,12 @@ module.exports = class Machine {
             return "Invalid amount entered" ;
         }
     }
+
+    selectItem(code)
+    {
+       let invalidCode = 'Vend56';
+       if(code == invalidCode){
+        return `your item with ${code} not found`;
+       }
+    }
 }
