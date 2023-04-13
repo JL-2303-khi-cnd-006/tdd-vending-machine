@@ -82,4 +82,4 @@ machine.deposit(100)
 const result = machine.cancel();
 expect(result).toEqual(expected);
 
-})
+});

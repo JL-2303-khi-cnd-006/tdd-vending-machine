@@ -60,5 +60,10 @@ module.exports = class Machine {
     }
     }
 
-   
+    cancel(){
+        let change = this.selectItem('Vend6', 100)
+        // this.depositedAmount = 0;
+       return {change:   this.amountDeposit} 
+    }
+
 }
