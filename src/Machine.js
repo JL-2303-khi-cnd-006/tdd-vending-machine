@@ -44,7 +44,9 @@ module.exports = class Machine {
        
 
     const change =[]
-    const remain = 30
+    const remain = depositedAmount - this.items[2].itemPrice 
+    console.log(remain)
+    let amountReturn = [20, 10]
     for (let i =0; i < this.validAmount.length; i++){
         const bill = this.validAmount[i];
         if (bill <= remain){
@@ -52,18 +54,19 @@ module.exports = class Machine {
         }
         // return change
     }
-    console.log(this.items[code])
+    // console.log(this.items[code])
+
     for (let item of this.items){
         if(item.code == code){
             return { item : item.itemName, change : change}
-        }
-    }
-    }
-
+        } 
+    } 
+    
+}
     cancel(){
         let change = this.selectItem('Vend6', 100)
         // this.depositedAmount = 0;
-       return {change:   this.amountDeposit} 
+       return {change: this.amountDeposit} 
     }
 
-}
+} 

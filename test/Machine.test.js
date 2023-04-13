@@ -83,3 +83,12 @@ const result = machine.cancel();
 expect(result).toEqual(expected);
 
 });
+
+it('Cannot return proper change', () =>
+{
+const machine = new Machine();
+const expected = 'Cannot return proper change.  Please choose another item or cancel the transaction'
+const result = machine.selectItem('Vend6', 150);
+expect(expected).toBe(result);
+
+});
