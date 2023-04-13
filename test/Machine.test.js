@@ -7,9 +7,9 @@ describe('the vending machine', () => {
         const expected = [{itemName: 'crisps', itemPrice: 100}, {itemName: 'chocolate',itemPrice: 100}, {itemName:'mint', itemPrice: 70}];
         
         // exercise
-        const actual = machine.seeSelections();
+        const actual = machine.seeSelections() ;
         
         // assert
-        expect(actual).toEqual(expected); 
+        expect(actual).toEqual(expected) ; 
     });
 });
