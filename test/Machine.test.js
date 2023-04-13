@@ -55,7 +55,7 @@ it('Unsufficient Deposit', () =>
 {
 const machine = new Machine();
 const expected = "Your deposit is insufficient.  Please add Rs 20 for this item";
-const result = machine.selectItem('Vend6', 50);
+const result = machine.selectItem('Vend6', 50) ;
 expect(result).toBe(expected);
 
 })

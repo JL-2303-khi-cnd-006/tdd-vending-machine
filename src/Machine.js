@@ -26,11 +26,12 @@ module.exports = class Machine {
         }
     }
 
-    selectItem(code)
+    selectItem(code, depositedAmount)
     {
        let invalidCode = 'Vend56';
        if(code == invalidCode){
         return `your item with ${code} not found`;
+        
        }
     }
 }
