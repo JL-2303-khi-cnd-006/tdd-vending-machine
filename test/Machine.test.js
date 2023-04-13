@@ -72,3 +72,14 @@ const result = machine.selectItem('Vend6', 100);
 expect(result).toEqual(expected);
 
 })
+
+
+it('Cancel the Order', () =>
+{
+const machine = new Machine();
+const expected = {change: 100}
+machine.deposit(100)
+const result = machine.cancel();
+expect(result).toEqual(expected);
+
+})
